@@ -2,9 +2,10 @@
 
 import os
 from PIL import Image
-
+p_path = os.path.abspath('..')
+img_path = os.path.dirname(p_path)+'/test_file/'
 ext = ['jpg', 'jpeg', 'png']
-files = os.listdir('/Users/qianbaoios/Desktop/project/test_file')
+files = os.listdir(img_path)
 
 
 def process_image(filename, mwidth=200, mheight=400):
@@ -26,4 +27,4 @@ def process_image(filename, mwidth=200, mheight=400):
 
 for file in files:
     if file.split('.')[-1] in ext:
-        process_image('/Users/qianbaoios/Desktop/project/test_file/'+file)
+        process_image(img_path+file)
